@@ -219,6 +219,9 @@ master_does_singleInstances <- subset(master_does,
                !duplicated(master_does[,c("Title.number","Application_yearmon")])
                & !duplicated(master_does[,c("Title.number","Application_yearmon")],fromLast = T))
 
+#Seems to be right
+#nrow(unique(master_does_singleInstances[,c("Title.number","Application_yearmon")]))
+
 #Title/yearmon single instances saved
 saveRDS(master_does_singleInstances,
         "JessieExtDrive/Misc_RoS_R_Saves/master_filter_datesOfEntryProcessed_singleInstances.rds")
